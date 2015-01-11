@@ -7,7 +7,7 @@ class Compleat < Formula
   depends_on 'ghc'
 
   def install
-    system "./Setup.lhs", "configure", "--prefix=#{prefix}"
+    system "./Setup.lhs", "configure", "--user", "--prefix=#{prefix}"
     system "./Setup.lhs", "build"
     system "./Setup.lhs", "install"
   end
